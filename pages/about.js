@@ -4,22 +4,17 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import React from 'react';
 
-export default function Index(props) {
+export default function Error(props) {
     if (props.pageName && props.desc) {
         return (
             <div>
-
-                <Head>
-                    <script type="text/javascript"
-                        src="main.js"
-                    ></script>
-                </Head>
                 <p>
                     <a href="http://www.google.com" style={{ color: 'blue'}}>Click here to Go to Google!</a>
                 </p>
                 <p>{props.pageName}</p>
                 <p>{props.desc}</p>
                 <p>{props.timestamp}</p>
+                <p>There is no script added to this page</p>
             </div>
         )
     }
@@ -29,5 +24,5 @@ export default function Index(props) {
 }
 
 export async function getServerSideProps(context) {
-    return { props: { pageName: "About Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
+    return { props: { pageName: "Error Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
 }
