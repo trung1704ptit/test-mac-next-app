@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ name, desc }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,11 +20,13 @@ export default function Home() {
         <Link href="/about">
           <a>About Us (Next/Link)</a>
         </Link>
-
-        <a className='active' href="/">Home (a tag)</a>
-
-        <a href="/about">About Us (a tag)</a>
+        <h2>{name}</h2>
+        <p>{desc}</p>
       </main>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  return { props: { name: "Trung", pageName: "Home Page", desc: 'Fetched from server side render' } }
 }
