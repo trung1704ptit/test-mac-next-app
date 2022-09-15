@@ -18,12 +18,12 @@ export default function Home() {
         </Link>
 
         <Link href="/about">
-          <a>About Us (Next/Link)</a>
+          <a className='active'>About Us (Next/Link)</a>
         </Link>
 
         <a href="/">Home (a tag)</a>
 
-        <a href="/about">About Us (a tag)</a>
+        <a className='active' href="/about">About Us (a tag)</a>
       </main>
     </div>
   )
