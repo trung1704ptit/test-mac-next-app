@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import React from 'react';
 
-export default function Error(props) {
+export default function About(props) {
     if (props.pageName && props.desc) {
         return (
             <div>
@@ -24,5 +24,5 @@ export default function Error(props) {
 }
 
 export async function getServerSideProps(context) {
-    return { props: { pageName: "Error Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
+    return { props: { pageName: "About Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
 }
