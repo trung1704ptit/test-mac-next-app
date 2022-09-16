@@ -29,5 +29,5 @@ export default function Index(props) {
 }
 
 export async function getServerSideProps(context) {
-    return { props: { pageName: "About Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
+    return { props: { pageName: "Home Page", desc: 'Fetched from server side render', timestamp: Date.now() } }
 }
