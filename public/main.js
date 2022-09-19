@@ -6,6 +6,7 @@
     if (isSafari || isIOS) {
         window.onpageshow = function(event) {
             if (event.persisted) {
+                console.log('reload page................')
                 window.location.reload();
             }
         };
